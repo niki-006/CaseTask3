@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мини-блог</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Мини-блог</h1>
+  <nav id="mainNav" class="hidden">
+    <button data-view="feed">Лента</button>
+    <button data-view="all">Все посты</button>
+    <button data-view="my">Мои посты</button>
+    <button data-view="users">Пользователи</button>
+  </nav>
+  <div id="userbar" class="hidden"></div>
+</header>
+
+  <div class="container">
+
+    <div id="authView" class="card">
+      <h2>Вход</h2>
+      <input id="loginUsername" placeholder="Имя пользователя">
+      <input id="loginPassword" type="password" placeholder="Пароль">
+      <button class="primary" onclick="loginUser()">Войти</button>
+      <p class="error" id="loginError"></p>
+      <hr>
+      <h2>Регистрация</h2>
+      <input id="regUsername" placeholder="Имя пользователя">
+      <input id="regPassword" type="password" placeholder="Пароль">
+      <button class="primary" onclick="registerUser()">Зарегистрироваться</button>
+      <p class="error" id="regError"></p>
+    </div>
+
+    <div id="feedView" class="hidden"></div>
+    <div id="allView" class="hidden"></div>
+    <div id="myView" class="hidden"></div>
+    <div id="usersView" class="hidden"></div>
+    <div id="postView" class="hidden"></div>
+    
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
